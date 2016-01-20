@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Self</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div class="general-overlay">
+			<%= image_tag 'main/space.png', class: "overlaypic"%>
+			<div class="header">
+				<div class="prelogo">
+					
+				</div>
+				<div class="logo">
+					<%= image_tag 'main/logo.png'%>
+				</div>
+				<div class="search">
+					<%= image_tag 'main/search.png'%>
+				</div>
+				<div class="list">
+					<%= image_tag 'main/map.png'%>
+				</div>
+				<div class="map">
+					<%= image_tag 'main/map.png'%>
+				</div>
+				<hr class="topline-right">
+				</hr>
+			</div>
+			<div class="center-block">
+
+				<div class="center-header">
+					<div class="center-header-left">
+						<div class="white-circle"></div>
+						<div class="white-line"></div>
+					</div>
+
+					<div class="center-header-center">
+						<%= image_tag 'main/hyroscope-up.png', id: "spinner" %>
+						<div class="right-border">
+							<div class="white-circle"></div>
+							<div class="white-line"></div>
+						</div>
+						<canvas id="canv-up"></canvas>
+						<div class="left-border">
+							<div class="white-circle"></div>
+							<div class="white-line"></div>
+						</div>
+					</div>
+					<div class="center-header-right">
+						<div class="white-circle"></div>
+						<div class="white-line"></div>
+					</div>
+				</div>
+				<div class="center-left">
+
+				</div>
+				<div class="placeholder">
+					<div class="left-top-corner"><%= image_tag 'main/corner.png'%> </div>
+					<div class="left-bottom-corner"><%= image_tag 'main/corner.png'%> </div>
+					<div class="right-top-corner"><%= image_tag 'main/corner.png'%> </div>
+					<div class="right-bottom-corner"><%= image_tag 'main/corner.png'%> </div>
+					<%= yield %>
+				</div>
+				<div class="center-right">
+
+				</div>
+			</div>
+			<div class="footer">
+				<div class="shayba shayba-1">
+					<%= image_tag 'main/socials.png'%>
+					<span class="shayba-text"> МЕНЮ </span>
+				</div>
+				<div class="shayba shayba-2">
+					<%= image_tag 'main/socials.png'%>
+					<span class="shayba-text"> МЕНЮ </span>
+				</div>
+				<div class="shayba shayba-3">
+					<%= image_tag 'main/socials.png'%>
+					<span class="shayba-text"> МЕНЮ </span>
+				</div>
+				<div class="shayba shayba-4">
+					<%= image_tag 'main/socials.png'%>
+					<span class="shayba-text"> МЕНЮ </span>
+				</div>
+				<div class="center-header-left">
+						<div class="white-circle"></div>
+						<div class="white-line"></div>
+					</div>
+
+					<div class="center-header-center">
+						<%= image_tag 'main/hyroscope-down.png', id: "spinner" %>
+						<div class="right-border">
+							<div class="white-circle"></div>
+							<div class="white-line"></div>
+						</div>
+						<canvas id="canv-down"></canvas>
+						<div class="left-border">
+							<div class="white-circle"></div>
+							<div class="white-line"></div>
+						</div>
+					</div>
+					<div class="center-header-right">
+						<div class="white-circle"></div>
+						<div class="white-line"></div>
+					</div>
+			</div>
+		</div>
+	</body>
+</html>
