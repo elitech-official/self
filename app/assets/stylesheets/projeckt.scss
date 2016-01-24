@@ -1,0 +1,42 @@
+.project-wrapper{
+  margin:0 auto;
+  margin-top:11vh;
+  width: 90%;
+  height: 70%;
+  position: relative;
+  background:image-url('project/border.png')no-repeat;
+  background-size:100% 100%;
+  & .project-name{
+    position:relative;
+    width:12vw;
+    height:7vw;
+    margin:0 auto;
+      & img{width:100%;}
+      & span{
+        position:absolute;
+        top:4vh;
+        left:3vw;
+        color:#FFF;
+        font-size:1.6vw;
+      }
+  }
+  & .arrow-right{
+    width:5vw;
+    position:absolute;
+    top:50%;
+    right:-2.2vw;
+    & img{width:100%;}
+    }
+  & .arrow-left{
+    width:5vw;
+     position:absolute;
+    top:50%;
+    left:-2.2vw;
+    & img{width:100%;}
+  }
+  .project-file{
+    text-align:center;
+    margin-top:10vh;
+    color:white;
+  }
+ }
