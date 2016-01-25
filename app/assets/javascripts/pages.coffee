@@ -1,31 +1,22 @@
 drawTriangle = ->
-  d_canvas = document.getElementById('canv-up')
-  context = d_canvas.getContext('2d')
-  x = d_canvas.width / 2
-  y = d_canvas.height
-  context.beginPath()
-  context.moveTo 0, 0
-  context.lineTo d_canvas.width / 2, d_canvas.height
-  context.lineTo d_canvas.width, 0
-  context.lineWidth = 8
-  context.strokeStyle = '#FFF'
-  context.stroke()
+  w = document.getElementById('canv-up').offsetWidth
+  h = document.getElementById('canv-up').offsetHeight
+  paper = Raphael('canv-up')
+  paper.setViewBox 0, 0, w, h, true
+  paper.setSize '100%', '100%'
+  path = 'M 0 0 L' + ' ' + w / 2 + ' ' + h + 'L ' + ' ' + w + ' 0'
+  paper.path(path).attr('stroke', '#ffffff').attr('stroke-opacity', 1).attr("stroke-width", 3)
   return
 
 drawTrapec = ->
-  trap_canv = document.getElementById('canv-down')
-  context = trap_canv.getContext("2d")
-  x1 = trap_canv.width/3
-  x2 = x1*2
-  context.beginPath()
-  context.moveTo(0, trap_canv.height)
-  context.lineTo x1, 0
-  context.lineTo x2, 0
-  context.lineTo trap_canv.width, trap_canv.height
-  context.lineWidth = 8
-  context.strokeStyle = '#FFF'
-  context.stroke()
-  return
+  w = document.getElementById('canv-down').offsetWidth
+  h = document.getElementById('canv-down').offsetHeight
+  paper = Raphael('canv-down')
+  paper.setViewBox 0, 0, w, h, true
+  paper.setSize '100%', '100%'
+  path = "M 0 " + h +  " L" + " " + w/3 + " " + 2 + "L " + " " + 2*w/3 + " 2" + "L " + w + " " + h;
+  paper.path(path).attr('stroke', '#ffffff').attr('stroke-opacity', 3).attr("stroke-width", 3).attr("stroke-dasharray", 0,20,0,20)
+
 
 $(document).ready ->
   drawTriangle()
@@ -36,3 +27,7 @@ $(document).ready ->
    drawTriangle()
    drawTrapec()
    return
+   
+   
+   
+ 
