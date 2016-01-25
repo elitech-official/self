@@ -6,6 +6,9 @@
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
+		
+		<script type="text/javascript" src="/vendor/assets/javascripts/raphaeljs.js"></script>
+		
 	</head>
 	<body>
 		<div class="general-overlay">
@@ -43,7 +46,7 @@
 							<div class="white-circle"></div>
 							<div class="white-line"></div>
 						</div>
-						<canvas id="canv-up"></canvas>
+						<div id="canv-up"></div>
 						<div class="left-border">
 							<div class="white-circle"></div>
 							<div class="white-line"></div>
@@ -62,6 +65,12 @@
 					<div class="left-bottom-corner"><%= image_tag 'main/corner.png'%> </div>
 					<div class="right-top-corner"><%= image_tag 'main/corner.png'%> </div>
 					<div class="right-bottom-corner"><%= image_tag 'main/corner.png'%> </div>
+					<div class="dotted round firefox">
+					  <svg viewBox="0 0 100% 100%" version="1.1"
+					  xmlns="http://www.w3.org/2000/svg"  class="dotted round firefox">
+					  <circle cx="50%" cy="50%" r="60%" />
+					</svg>
+					</div>
 					<%= yield %>
 				</div>
 				<div class="center-right">
@@ -96,7 +105,7 @@
 							<div class="white-circle"></div>
 							<div class="white-line"></div>
 						</div>
-						<canvas id="canv-down"></canvas>
+						<div id="canv-down"></div>
 						<div class="left-border">
 							<div class="white-circle"></div>
 							<div class="white-line"></div>
