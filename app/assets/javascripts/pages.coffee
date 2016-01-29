@@ -5,7 +5,7 @@ drawTriangle = ->
   paper.setViewBox 0, 0, w, h, true
   paper.setSize '100%', '100%'
   path = 'M 0 0 L' + ' ' + w / 2 + ' ' + h + 'L ' + ' ' + w + ' 0'
-  paper.path(path).attr('stroke', '#ffffff').attr('stroke-opacity', 1).attr("stroke-width", 3)
+  paper.path(path).attr('stroke', '#ffffff').attr('stroke-opacity', 1).attr("stroke-width", 1)
   return
 
 drawTrapec = ->
@@ -15,7 +15,7 @@ drawTrapec = ->
   paper.setViewBox 0, 0, w, h, true
   paper.setSize '100%', '100%'
   path = "M 0 " + h +  " L" + " " + w/3 + " " + 2 + "L " + " " + 2*w/3 + " 2" + "L " + w + " " + h;
-  paper.path(path).attr('stroke', '#ffffff').attr('stroke-opacity', 3).attr("stroke-width", 3).attr("stroke-dasharray", 0,20,0,20)
+  paper.path(path).attr('stroke', '#ffffff').attr('stroke-opacity', 3).attr("stroke-width", 1).attr("stroke-dasharray", 0,20,0,20)
 
 
 $(document).ready ->

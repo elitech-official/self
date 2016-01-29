@@ -18,7 +18,9 @@
 					
 				</div>
 				<div class="logo">
-					<%= image_tag 'main/logo.png'%>
+					<%= image_tag 'main/logo-line.png' , class: "logoline"%>
+					<%= image_tag 'main/border-logo.png', class: "borderlogo"%>
+					<%= image_tag 'main/logo-text.png' , class: "logotext"%>
 				</div>
 				<div class="search">
 					<%= image_tag 'main/search.png'%>
@@ -101,12 +103,12 @@
 
 					<div class="center-header-center">
 						<%= image_tag 'main/hyroscope-down.png', id: "spinner" %>
-						<div class="right-border">
+						<div class="right-border media-right-down">
 							<div class="white-circle"></div>
 							<div class="white-line"></div>
 						</div>
 						<div id="canv-down"></div>
-						<div class="left-border">
+						<div class="left-border media-left-down">
 							<div class="white-circle"></div>
 							<div class="white-line"></div>
 						</div>
